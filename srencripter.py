@@ -6,6 +6,7 @@
 ## -- 0x  					                             ***
 ## -- 2 caracteres por caracter(letra, numero, caracter) ***
 #***********************************************************
+import binascii
 class SREncripter:
 	global __LETRAS_MINUSCULAS, __LETRAS_MIN_ENC, __LETRAS_MAYUSCULAS, __LETRAS_MAY_ENC, __NUMEROS, __NUMEROS_ENC, __CARACTERES, __CARACTERES_ENC
 	__LETRAS_MINUSCULAS = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','ñ','o','p','q','r','s','t','u','v','w','x','y','z']
@@ -17,7 +18,8 @@ class SREncripter:
 	__CARACTERES = ['\t','\n',' ','\\','`','~','!','@','#','$','%','^','&','*','(',')','_','+','=','-','|',"'",'"',';',':','/','?','.',',']
 	__CARACTERES_ENC = ['aH','zA','aB','bC','cD','dE','eF','fG','gH','hI','iJ','jK','kL','lM','mN','nO','NO','oP','pQ','qR','rS','sT','tU','uV','vW','wX','xY','Ox']
 	def __init__(self):
-		pass
+		#print self.letras_min, self.letras_may
+		print "SREncripter Version 0.5"
 	#******************Funciones para Encriptar*******************
 	#Funcion de encriptar palabra de nivel 1
 	def __SRE_encripter( self, palabra ):
@@ -60,11 +62,11 @@ class SREncripter:
 					#print self.contador
 					self.aux += __CARACTERES_ENC[self.contador]
 				self.contador += 1
-		return self.aux
+		return self.aux 
 	#Funcion de encriptar por metodos
 	##Aun en ingenieria...
 	def SRE_encripter(self, metodo, palabra):
-		self.palabra = palabra
+		self.palabra = binascii.b2a_base64(palabra)
 		if metodo == 1:
 			return self.__SRE_encripter(self.palabra)
 		if metodo == 2:
@@ -110,7 +112,7 @@ class SREncripter:
 				self.aux = ''
 				self.aux += i
 				j = 1
-		return self.plb_cmplt
+		return binascii.a2b_base64(self.plb_cmplt)
 	#Funcion de comparar para cambiar palabra encriptada por letras
 	def __dlevel1(self, letra):
 		self.aux = ''
