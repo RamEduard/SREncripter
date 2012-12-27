@@ -17,8 +17,7 @@ class SREncripter:
 	__CARACTERES = ['\t','\n',' ','\\','`','~','!','@','#','$','%','^','&','*','(',')','_','+','=','-','|',"'",'"',';',':','/','?','.',',']
 	__CARACTERES_ENC = ['aH','zA','aB','bC','cD','dE','eF','fG','gH','hI','iJ','jK','kL','lM','mN','nO','NO','oP','pQ','qR','rS','sT','tU','uV','vW','wX','xY','Ox']
 	def __init__(self):
-		#print self.letras_min, self.letras_may
-		print "SREncripter Version 0.1"
+		pass
 	#******************Funciones para Encriptar*******************
 	#Funcion de encriptar palabra de nivel 1
 	def __SRE_encripter( self, palabra ):
