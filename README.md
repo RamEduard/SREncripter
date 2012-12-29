@@ -1,6 +1,6 @@
 #SREncripterPython#
 
-**Version: 0.2**
+**Version: 0.6**
 
 **Proyecto: Encriptador de palabras y documentos**
 

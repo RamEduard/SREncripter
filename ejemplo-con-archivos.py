@@ -5,7 +5,7 @@ from srencripter import *
 #Hago una instancia de la clase
 obj = SREncripter()
 #Hago una instancia a un archivo de lectura
-f = file('prueba.txt','r')
+f = file('archivos/prueba.txt','r')
 #Leo el archivo y guardo el contenido en una variable para trabajar con Este
 p = f.read()
 #Escribo p para ver el contenido del archivo
@@ -16,6 +16,6 @@ print p
 print PE
 f.close()
 #Para reemplazar el archivo con el contenido encriptado o decriptado
-#f = file('prueba.txt','w')
+#f = file('archivos/prueba.txt','w')
 #f.write(PE)
 #f.close()
